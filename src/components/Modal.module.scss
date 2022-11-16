@@ -1,0 +1,38 @@
+.mContainer {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1)
+  }
+  .modal {
+    width: 90%;
+    height: 90%;
+    background-color: rgb(58, 0, 29);
+    position: relative;
+
+    .closeBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+  }
+
+}
